@@ -29,7 +29,7 @@ app.post('/describir_ruta', async (req, res) => {
             try {
                 const response = await ai.models.generateContent({
                     model: "gemini-2.0-flash",
-                    contents: `dame una descripcion de la ruta entre estas dos ubicaciones: ${latitud_inicio} ${longitud_inicio} y ${latitud_fin} ${longitud_fin}, no quiero indicaciones de las rutas quiero una descripcion el ambiente y cosas turisticas de la ruta en menos de 150 caracteres. no agregues de nuevo las coordenadas.`
+                    contents: `dame una descripcion de la ruta entre estas dos ubicaciones: ${latitud_inicio} ${longitud_inicio} y ${latitud_fin} ${longitud_fin}, no quiero indicaciones de las rutas quiero una descripcion el ambiente y cosas turisticas de la ruta en menos de 200 caracteres, habla de la zona. no agregues de nuevo las coordenadas.`
                 });
                 console.log(response.text);
                 res.json({ descripcion: response.text }); // Enviar la respuesta aquí
