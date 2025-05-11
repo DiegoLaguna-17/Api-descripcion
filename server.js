@@ -20,8 +20,9 @@ app.post('/describir_ruta', async (req, res) => {
     if (!latitud_inicio || !longitud_inicio || !latitud_fin || !longitud_fin) {
       return res.status(400).json({ error: 'Faltan coordenadas en la petición.' });
     }
-
-    const graphhopperApiKey = '7bfad773-8832-4eee-9d15-1a9d07c3a5c1';
+    //key 1 7bfad773-8832-4eee-9d15-1a9d07c3a5c1
+  // key 2 63b19cd4-a9f9-47bd-a58b-0273d67721fa
+    const graphhopperApiKey = '63b19cd4-a9f9-47bd-a58b-0273d67721fa';
     const url = `https://graphhopper.com/api/1/route?point=${latitud_inicio},${longitud_inicio}&point=${latitud_fin},${longitud_fin}&vehicle=car&locale=es&key=${graphhopperApiKey}&points_encoded=false`;
 
     const response = await axios.get(url);
