@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import dotenv from 'dotenv';
 
 dotenv.config(); // Carga las variables de entorno desde .env
-const GEMINI_KEY = process.env.GEMINI_KEY;
+const GEMINI_KEY = 'AIzaSyApg0wYo2I2Kk4p1mkRItgyalpe4sxn1NQ';
 
 const app = express();
 const port = process.env.PORT || 3000;
